@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { resolveDep } from '@angular/core/src/view/provider';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { API_CONFIG } from '../../config/api.config';
 import { ProdutoDTO } from '../../models/produto.dto';
@@ -39,5 +38,9 @@ export class ProdutosPage {
         },
         error => {});
     }
+  }
+
+  showDetail(){
+    this.navCtrl.push('ProdutoDetailPage');
   }
 }
